@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.myViewHolder
         {
             Glide.with(mContext).asBitmap()
                     .load(image)
+                    .centerCrop()
                     .into(holder.albumArt);
         }
         else {

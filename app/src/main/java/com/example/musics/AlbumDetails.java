@@ -54,6 +54,7 @@ public class AlbumDetails extends AppCompatActivity {
         if (image!=null){
             Glide.with(this)
                     .load(image)
+                    .centerCrop()
                     .into(albumPhoto);
         }
         else {

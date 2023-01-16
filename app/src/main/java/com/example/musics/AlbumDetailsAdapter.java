@@ -49,6 +49,7 @@ public class AlbumDetailsAdapter extends RecyclerView.Adapter<AlbumDetailsAdapte
         {
             Glide.with(mContext).asBitmap()
                     .load(image)
+                    .centerCrop()
                     .into(holder.album_image);
         }
         else {

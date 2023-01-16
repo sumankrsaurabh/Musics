@@ -367,7 +367,7 @@ public class PlayerActivity extends AppCompatActivity {
 
         @Override
         public void onAnimationEnd(Animation animation) {
-            Glide.with(context).load(bitmap).into(imageView);
+            Glide.with(context).load(bitmap).centerCrop().into(imageView);
             AnimIn.setAnimationListener(new Animation.AnimationListener() {
                 @Override
                 public void onAnimationStart(Animation animation) {}

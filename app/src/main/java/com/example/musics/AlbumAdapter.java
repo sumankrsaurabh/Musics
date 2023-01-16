@@ -49,6 +49,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyHolder> {
         {
             Glide.with(mContext).asBitmap()
                     .load(image)
+                    .centerCrop()
                     .into(holder.album_image);
             bitmap = BitmapFactory.decodeByteArray(image, 0, image.length);
             Palette.from(bitmap).generate(palette -> {
