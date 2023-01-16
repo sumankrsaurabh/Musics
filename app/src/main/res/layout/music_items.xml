@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:gravity="center_vertical"
+    tools:ignore="UseCompoundDrawables">
+
+
+    <ImageView
+        android:id="@+id/musicImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/cover_song"
+        android:src="@drawable/logo" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/song_name"
+        android:textColor="@color/purple_700"
+        android:fontFamily="@font/josefin_sans"
+        android:textSize="16sp"
+        android:id="@+id/song_name"
+        android:textAllCaps="true"
+        android:layout_marginStart="10dp"/>
+
+
+</LinearLayout>

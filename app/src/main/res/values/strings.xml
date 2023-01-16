@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Musics</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cover_song">cover Song</string>
+    <string name="song_name">Song Name</string>
+    <string name="status">Now Playing</string>
+    <string name="search">Search</string>
+    <string name="sort_by">Sort by</string>
+    <string name="by_name">by name</string>
+    <string name="by_date">by_date</string>
+    <string name="by_size">by_size</string>
+</resources>
