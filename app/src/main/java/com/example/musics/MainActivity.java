@@ -26,13 +26,13 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
     static ArrayList<MusicFiles> musicFiles;
     static ArrayList<MusicFiles> albums=new ArrayList<>();
 
     private static final String MY_SHORT_PREF = "SortOrder";
+    static String order = null;
 
     @SuppressLint("SourceLockedOrientationActivity")
     @Override
@@ -77,8 +77,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     public static ArrayList<MusicFiles> getAllAudio(Context context)
     {
         SharedPreferences preferences = context.getSharedPreferences(MY_SHORT_PREF,MODE_PRIVATE);
-        String sortOrder = preferences.getString("sorting","sortByName");
-        String order = null;
+        String sortOrder = preferences.getString("shorting","sortByDate");
+
         ArrayList<MusicFiles> tempArrayList =new ArrayList<>();
         ArrayList<String> duplicate =new ArrayList<>();
         albums.clear();
@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         return true;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         SharedPreferences.Editor editor = getSharedPreferences(MY_SHORT_PREF,MODE_PRIVATE).edit();
