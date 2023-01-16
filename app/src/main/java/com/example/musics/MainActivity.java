@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.search,menu);
+        getMenuInflater().inflate(R.menu.search, menu);
         MenuItem menuItem = menu.findItem(R.id.search_bar);
         SearchView searchView = (SearchView) menuItem.getActionView();
         searchView.setOnQueryTextListener(this);
@@ -147,8 +147,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     public boolean onQueryTextChange(String newText) {
         String userInput = newText.toLowerCase();
         ArrayList<MusicFiles> myFiles = new ArrayList<>();
-        for (MusicFiles song : musicFiles){
-            if (song.getTitle().toLowerCase().contains(userInput)){
+        for (MusicFiles song : musicFiles) {
+            if (song.getTitle().toLowerCase().contains(userInput)) {
                 myFiles.add(song);
             }
         }

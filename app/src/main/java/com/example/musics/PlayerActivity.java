@@ -385,5 +385,8 @@ public class PlayerActivity extends AppCompatActivity {
         public void onAnimationRepeat(Animation animation) {}
     });
     imageView.startAnimation(AnimOut);
-}
     }
+
+
+
+}
