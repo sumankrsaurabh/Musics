@@ -32,7 +32,7 @@ public class AlbumFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_album, container, false);
         recyclerView = view.findViewById(R.id.recyclerSongView);
         recyclerView.setHasFixedSize(true);
-        if (musicFiles.size()!=0)
+        if (albums.size()!=0)
         {
             albumAdapter = new AlbumAdapter(getContext(),albums);
 

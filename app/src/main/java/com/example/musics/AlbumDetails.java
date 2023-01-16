@@ -43,9 +43,11 @@ public class AlbumDetails extends AppCompatActivity {
 
         albumName = getIntent().getStringExtra("albumName");
         int j = 0;
+        albumSongs.clear();
         for (int i = 0;i<musicFiles.size();i++){
             if (albumName.equals(musicFiles.get(i).getAlbum())){
-                albumSongs.add(j,albums.get(i));
+
+                albumSongs.add(j,musicFiles.get(i));
             }
         }
         byte[] image = getAlbumArt(albumSongs.get(0).getPath());
