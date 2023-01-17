@@ -1,9 +1,6 @@
 package com.example.musics;
 
-import static com.example.musics.AlbumAdapter.albumFiles;
-import static com.example.musics.MainActivity.albums;
 import static com.example.musics.MainActivity.musicFiles;
-import static com.example.musics.MusicAdapter.mFiles;
 
 import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
@@ -35,10 +32,6 @@ public class AlbumDetails extends AppCompatActivity {
         setContentView(R.layout.activity_album_details);
         recyclerView = findViewById(R.id.recyclerView);
         albumPhoto = findViewById(R.id.albumPhoto);
-
-
-
-
 
 
         albumName = getIntent().getStringExtra("albumName");

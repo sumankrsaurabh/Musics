@@ -12,6 +12,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaMetadataRetriever;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -33,7 +34,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class PlayerActivity extends AppCompatActivity
-        implements ActionPlaying, ServiceConnection {
+        implements ActionPlaying, ServiceConnection , MediaPlayer.OnCompletionListener {
     MusicService musicService;
     TextView song_name;
     TextView artist_name;
@@ -413,5 +414,11 @@ public class PlayerActivity extends AppCompatActivity
     @Override
     public void onServiceDisconnected(ComponentName name) {
         musicService = null;
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mp) {
+        nextBtnClicked();
+
     }
 }
