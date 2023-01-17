@@ -3,6 +3,7 @@ package com.example.musics;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
@@ -15,6 +16,8 @@ public class MusicService extends Service {
     MyBinder mBinder = new MyBinder();
     MediaPlayer mediaPlayer;
     ArrayList<MusicFiles> musicFiles = new ArrayList<>();
+
+    Uri uri;
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -32,4 +35,10 @@ public class MusicService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         return super.onStartCommand(intent, flags, startId);
     }
+
+    void setMediaPlayer(){
+        mediaPlayer = MediaPlayer.create(getBaseContext(),uri);
+    }
 }
+
+
